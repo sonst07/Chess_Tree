@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/num1"
+        android:layout_above="@id/num2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="game start"
+        android:textSize="30sp"
+        android:textColor="#FFEB3B"
+        android:background="#00BCD4"/>
+
+    <Button
+        android:id="@+id/num2"
+        android:layout_above="@id/num3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="my friend"
+        android:textSize="30sp"
+        android:textColor="#FFEB3B"
+        android:background="#00BCD4"/>
+
+    <Button
+        android:id="@+id/num3"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="rule"
+        android:layout_marginBottom="20dp"
+        android:textSize="30sp"
+        android:textColor="#FFEB3B"
+        android:background="#00BCD4"/>
+
+    <Button
+        android:id="@+id/num4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/num3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="setting"
+        android:textSize="30sp"
+        android:textColor="#FFEB3B"
+        android:background="#00BCD4"/>
+
+</RelativeLayout>
