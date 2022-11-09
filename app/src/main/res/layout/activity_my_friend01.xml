@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyFriend_01"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/friend_title"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Friend List"
+        android:textSize="40dp"
+        android:textColor="#653C00"/>
+
+    <RelativeLayout
+        android:id="@+id/people1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/friend_title"
+        android:layout_height="60dp"
+        android:background="#81C784">
+
+        <ImageView
+            android:id="@+id/cccolor1"
+            android:layout_margin="10dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blue" />
+        <ImageView
+            android:id="@+id/human1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cccolor1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/people"/>
+        <TextView
+            android:id="@+id/name1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/human1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="손호민"
+            android:textColor="#653C00"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/winLate1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/name1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100Win"
+            android:textColor="#653C00"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/loseLate1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/winLate1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10Lose"
+            android:textColor="#653C00"
+            android:textSize="15dp"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/loseLate1"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/trash"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/people2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/people1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#81C784">
+
+        <ImageView
+            android:id="@+id/cccolor2"
+            android:layout_margin="10dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/red" />
+        <ImageView
+            android:id="@+id/human2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cccolor2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/people"/>
+        <TextView
+            android:id="@+id/name2"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/human2"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="쓔퍼쏜"
+            android:textColor="#653C00"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/winLate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/name2"
+            android:text="100Win"
+            android:textColor="#653C00"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/loseLate2"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/winLate2"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10Lose"
+            android:textColor="#653C00"
+            android:textSize="15dp"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/loseLate2"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/trash"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/people3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/people2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#81C784">
+
+
+
+        <ImageView
+            android:id="@+id/cccolor3"
+            android:layout_margin="10dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/black" />
+        <ImageView
+            android:id="@+id/human3"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cccolor3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/people"/>
+        <TextView
+            android:id="@+id/name3"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/human3"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="쓔퍼콘"
+            android:textColor="#653C00"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/winLate3"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/name3"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100Win"
+            android:textColor="#653C00"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/loseLate3"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/winLate3"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10Lose"
+            android:textColor="#653C00"
+            android:textSize="15dp"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/loseLate3"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/trash"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

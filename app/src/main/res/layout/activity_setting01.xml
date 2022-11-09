@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting_01">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/st1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/st2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_view"
+            android:fontFamily="@font/archivo"
+            android:text="My Profile"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/st2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/st3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_view"
+            android:fontFamily="@font/archivo"
+            android:text="Log out"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/st3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_view"
+            android:fontFamily="@font/archivo"
+            android:text="Exit"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/st4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/st3"
+            android:text="Withraw"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_view"
+            android:fontFamily="@font/archivo"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
