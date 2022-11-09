@@ -6,32 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".GameStart_01">
 
-    <Button
-        android:id="@+id/gs1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:background="@drawable/selector_view"
-        android:fontFamily="@font/archivo"
-        android:text="Online Battle"
-        android:textColor="#653C00"
-        android:textSize="30sp"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/gs2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/gs1"
+    <RelativeLayout
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/selector_view"
-        android:fontFamily="@font/archivo"
-        android:text="Offline Battle"
-        android:textColor="#653C00"
-        android:textSize="30sp"
-        android:textAllCaps="false"/>
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/gs1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/selector_view"
+
+            android:fontFamily="@font/archivo"
+            android:text="Online Battle"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/gs2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gs1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+
+            android:background="@drawable/selector_view"
+
+            android:fontFamily="@font/archivo"
+            android:text="Offline Battle"
+            android:textColor="#653C00"
+            android:textSize="30sp"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

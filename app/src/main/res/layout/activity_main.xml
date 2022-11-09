@@ -1,85 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chess Tree"
-        android:fontFamily="@font/archivo"
-        android:textSize="60dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="220dp"
-        android:textColor="#653C00"/>
+    <LinearLayout
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <RelativeLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="25dp"
+
+            android:text="Chess Tree"
+            android:fontFamily="@font/archivo"
+            android:textSize="60dp"
+            android:textColor="#653C00"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/main_frame"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="290dp">
+        android:layout_height="0dp"
+        android:layout_weight="6">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-        <Button
-            android:id="@+id/num1"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/num2"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/selector_view"
-            android:fontFamily="@font/archivo"
-            android:text="game start"
-            android:textAllCaps="false"
-            android:textColor="#653C00"
-            android:textSize="30sp" />
+            <Button
+                android:id="@+id/num1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
 
-        <Button
-            android:id="@+id/num2"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/num3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/selector_view"
-            android:fontFamily="@font/archivo"
-            android:text="my friend"
-            android:textAllCaps="false"
-            android:textColor="#653C00"
-            android:textSize="30sp" />
+                android:layout_above="@id/num2"
+                android:layout_centerHorizontal="true"
 
-        <Button
-            android:id="@+id/num3"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/selector_view"
-            android:fontFamily="@font/archivo"
-            android:text="rule"
-            android:textAllCaps="false"
-            android:textColor="#653C00"
-            android:textSize="30sp" />
-        />
+                android:background="@drawable/selector_view"
 
-        <Button
-            android:id="@+id/num4"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/num3"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/selector_view"
-            android:fontFamily="@font/archivo"
-            android:text="setting"
-            android:textAllCaps="false"
-            android:textColor="#653C00"
-            android:textSize="30sp" />
+                android:fontFamily="@font/archivo"
+                android:text="game start"
+                android:textAllCaps="false"
+                android:textColor="#653C00"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/num2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@id/num3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@drawable/selector_view"
+
+                android:fontFamily="@font/archivo"
+                android:text="my friend"
+                android:textAllCaps="false"
+                android:textColor="#653C00"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/num3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+
+                android:background="@drawable/selector_view"
+
+                android:fontFamily="@font/archivo"
+                android:text="rule"
+                android:textAllCaps="false"
+                android:textColor="#653C00"
+                android:textSize="30sp" />
+            />
+
+            <Button
+                android:id="@+id/num4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/num3"
+                android:layout_centerHorizontal="true"
+
+                android:background="@drawable/selector_view"
+
+                android:fontFamily="@font/archivo"
+                android:text="setting"
+                android:textAllCaps="false"
+                android:textColor="#653C00"
+                android:textSize="30sp" />
+        </RelativeLayout>
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
-</RelativeLayout>
+
+</LinearLayout>

@@ -30,6 +30,7 @@ public class IntroActivity extends AppCompatActivity {
 
                 Intent intent= new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         }, 1200); // 화면에 Logo 2초간 보이기
     }

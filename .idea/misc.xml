@@ -8,6 +8,7 @@
         <entry key="..\:/Users/sonst/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_rule01.xml" value="0.2109375" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_rule02.xml" value="0.2109375" />
+<<<<<<< HEAD
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.103" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/drawable/_focus.xml" value="0.103" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/drawable/button_first.xml" value="0.103" />
@@ -38,6 +39,8 @@
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/layout/rule_03.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.103" />
         <entry key="..\:/Users/sonst/AndroidStudioProjects/ssu_app_01/ssu_app_01-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.103" />
+=======
+>>>>>>> 668642ed7c43b4490fcf9af8fbfa950cdb9da963
       </map>
     </option>
   </component>
