@@ -28,8 +28,8 @@
                 android:layout_height="match_parent">
                 <ImageButton
                     android:id="@+id/x_button"
-                    android:layout_width="35sp"
-                    android:layout_height="35sp"
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/xxx"
                     android:scaleType="fitCenter"

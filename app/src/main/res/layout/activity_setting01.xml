@@ -52,7 +52,7 @@
             android:background="@drawable/selector_view"
 
             android:fontFamily="@font/archivo"
-            android:text="Exit"
+            android:text="Withdraw"
             android:textColor="#653C00"
             android:textSize="30sp"
             android:textAllCaps="false"/>
@@ -68,7 +68,7 @@
             android:background="@drawable/selector_view"
 
             android:fontFamily="@font/archivo"
-            android:text="Withdraw"
+            android:text="Exit"
             android:textColor="#653C00"
             android:textSize="30sp"
             android:textAllCaps="false"/>
