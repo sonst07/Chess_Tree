@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "823405181618",
+    "project_id": "chess-tree-420dc",
+    "storage_bucket": "chess-tree-420dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823405181618:android:849037a8078db6e786e7ab",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823405181618-ko6vflgdlr5cvr9nuq9ku0hs5daq1jol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "5eb150b83c606557bd85308608b1ba34b8477bab"
+          }
+        },
+        {
+          "client_id": "823405181618-at2t5qhcfoeplk0rtqc1a6dg8lr187sa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdWNj5ZCYeXz5MRccUO_C7TVowmTpbZJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823405181618-at2t5qhcfoeplk0rtqc1a6dg8lr187sa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
