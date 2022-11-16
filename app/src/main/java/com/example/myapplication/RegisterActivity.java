@@ -22,8 +22,9 @@ public class RegisterActivity extends BaseActivity {
 
     private FirebaseAuth mFirebaseAuth; // 파이어베이스 인증
     private DatabaseReference mDatabaseRef;
-    private EditText mEtEmail, mEtPwd;
+    private EditText mEtEmail, mEtPwd, mEtNickname;
     private Button mBtnRegister;
+    private UserAccount account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class RegisterActivity extends BaseActivity {
 
         mEtEmail = findViewById(R.id.et_email);
         mEtPwd = findViewById(R.id.et_pwd);
+        mEtNickname = findViewById(R.id.et_nickName);
         mBtnRegister = findViewById(R.id.btn_register);
 
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,8 @@ public class RegisterActivity extends BaseActivity {
 
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
+                String strNickname = mEtNickname.getText().toString();
+
 
                 mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -53,12 +57,15 @@ public class RegisterActivity extends BaseActivity {
                             assert firebaseUser != null;
                             account.setIdToken(firebaseUser.getUid());
                             account.setEmailId(firebaseUser.getEmail());
+                            account.setNickName(strNickname);
                             account.setPassword(strPwd);
 
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
-                            Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                            Toast.makeText(RegisterActivity.this, strNickname+"님 어서 오세요", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+//                            intent.putExtra("nickName", strNickname);
+//                            intent.putExtra("point", account.getPoint());
                             startActivity(intent);
                             overridePendingTransition(0, 0);
                         }else{

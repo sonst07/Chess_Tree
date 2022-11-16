@@ -54,7 +54,7 @@ public class Setting_01 extends BaseActivity {
             public void onClick(View v) {
                 mFirebaseAuth.getCurrentUser().delete();
                 Toast.makeText(Setting_01.this, "계절탈퇴되었습니다.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Setting_01.this, LoginActivity.class);
+                Intent intent = new Intent(Setting_01.this, goodbyeActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
                 finishAffinity();

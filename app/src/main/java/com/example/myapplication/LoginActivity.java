@@ -28,7 +28,6 @@ public class LoginActivity extends BaseActivity {
     private FirebaseAuth mFirebaseAuth; // 파이어베이스 인증
     private DatabaseReference mDatabaseRef;
     private EditText mEtEmail, mEtPwd;
-    private boolean firstLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class LoginActivity extends BaseActivity {
 
         String a = mFirebaseAuth.getUid();
 
-        if(a!=null&&firstLogin){
+        if(a!=null){
             user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
                 @Override
                 public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
@@ -73,7 +72,6 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if( task.isSuccessful()){
-                            firstLogin = true;
                             Toast.makeText(LoginActivity.this, strEmail+" 안녕하세요", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);

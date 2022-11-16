@@ -4,12 +4,24 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/goodbye_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="see you later bro"
-        android:textSize="40dp"
-        android:textColor="#653C00"
+        android:layout_centerInParent="true"
         android:fontFamily="@font/archivo"
-        android:layout_centerInParent="true"/>
+        android:text="see you later bro"
+        android:textColor="#653C00"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/goodbye_1"
+        android:layout_alignLeft="@+id/goodbye_1"
+        android:layout_marginBottom="-70dp"
+        android:fontFamily="@font/archivo"
+        android:text="i will miss you"
+        android:textColor="#653C00"
+        android:textSize="40dp" />
 
 </RelativeLayout>
