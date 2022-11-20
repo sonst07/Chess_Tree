@@ -19,8 +19,7 @@ public class Setting_01 extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting01);
-        FirebaseAuth mFirebaseAuth;
-        mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
 
         bts1 = findViewById(R.id.st1);
         bts2 = findViewById(R.id.st2);
