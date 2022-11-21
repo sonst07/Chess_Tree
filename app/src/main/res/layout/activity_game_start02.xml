@@ -96,7 +96,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="123" />
+                android:layout_weight="123">
+
+                <com.example.myapplication.Unit
+                    android:id="@+id/A_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/unit_0" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -114,7 +123,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="123" />
+                android:layout_weight="123">
+
+                <com.example.myapplication.Unit
+                    android:id="@+id/A_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/unit_0" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -136,7 +154,15 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="123" />
+                android:layout_weight="123">
+
+                <com.example.myapplication.Unit
+                    android:id="@+id/B_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/unit_0" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -154,7 +180,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="123" />
+                android:layout_weight="123">
+
+                <com.example.myapplication.Unit
+                    android:id="@+id/B_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/unit_0" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
