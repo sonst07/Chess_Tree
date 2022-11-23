@@ -16,12 +16,13 @@ public class GameStart_02 extends BaseActivity {
     Unit lastClickView;
     Unit a_1, a_2, a_3, a_4, a_a, a_b;
     Unit b_1, b_2, b_3, b_4, b_a, b_b;
-
-
+    boolean a_1_touched, a_2_touched, a_3_touched, a_4_touched;
+    boolean b_1_touched, b_2_touched, b_3_touched, b_4_touched;
 
     ArrayList<Unit> list = new ArrayList<>();
     ArrayList<Unit> alist = new ArrayList<>();
     ArrayList<Unit> blist = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,49 +50,114 @@ public class GameStart_02 extends BaseActivity {
 
 
         a_1.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+            Unit ChangerUnit = a_1;
             @Override
             public void onClick(View v) {
-//                if(lastClickView == a_2){
+
+                if(lastClickView == a_2){
 //                    a_1.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_1);
-//
-//                    Unit temp = a_1;
-//                    a_1 = a_2;
-//                    a_2 = temp;
-//
-//                    BackgroundChanger(a_2, 0);
-//                    lastClickView = a_1;
-//                    return;
-//                }
 
-                i = 1 - i;
-                BackgroundChanger(a_1, i);
+                    Unit temp = a_1;
+                    a_1 = a_2;
+                    a_2 = temp;
+
+                    BackgroundChanger(a_2, false);
+                    lastClickView = null;
+                    a_2_touched = false;
+                    a_1_touched = false;
+                    return;
+                }else if(lastClickView == a_4){
+//                    a_4.setBackgroundResource(R.drawable.unit_a_1);
+//                    a_1.setBackgroundResource(R.drawable.unit_a_4);
+
+                    Unit temp = a_4;
+                    a_4 = a_1;
+                    a_1 = temp;
+
+                    BackgroundChanger(a_4, false);
+                    lastClickView =null;
+                    a_1_touched = false;
+                    a_4_touched = false;
+                    return;
+                }else if(lastClickView == a_3){
+//                    a_1.setBackgroundResource(R.drawable.unit_a_3);
+//                    a_3.setBackgroundResource(R.drawable.unit_a_1);
+
+                    Unit temp = a_1;
+                    a_1 = a_3;
+                    a_3 = temp;
+
+                    BackgroundChanger(a_3, false);
+                    lastClickView =null;
+                    a_1_touched = false;
+                    a_3_touched = false;
+                    return;
+                }
+
+
+
+
+                a_1_touched = !a_1_touched;
+                BackgroundChanger(ChangerUnit, a_1_touched);
 
                 lastClickView = a_1;
             }
         });
 
         a_2.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+            Unit ChangerUnit = a_2;
             @Override
             public void onClick(View v) {
 
-                if(lastClickView == a_3){
-                    a_3.setBackgroundResource(R.drawable.unit_a_2);
-                    a_2.setBackgroundResource(R.drawable.unit_a_3);
+                if(lastClickView == a_3 ){ //&& a_3.selected ??? 이 문제를 어떻게 처리할까?
+//                    a_3.setBackgroundResource(R.drawable.unit_a_2);
+//                    a_2.setBackgroundResource(R.drawable.unit_a_3);
 
                     Unit temp = a_3;
                     a_3 = a_2;
                     a_2 = temp;
 
-                    BackgroundChanger(a_3, 0);
-                    lastClickView = a_2;
+                    BackgroundChanger(a_3, false);
+                    lastClickView =null;
+                    a_2_touched = false;
+                    a_3_touched = false;
+                    return;}
+                else if(lastClickView == a_4){
+//                    a_4.setBackgroundResource(R.drawable.unit_a_2);
+//                    a_2.setBackgroundResource(R.drawable.unit_a_4);
+
+                    Unit temp = a_4;
+                    a_4 = a_2;
+                    a_2 = temp;
+
+                    BackgroundChanger(a_4, false);
+                    lastClickView =null;
+                    a_2_touched = false;
+                    a_4_touched = false;
+                    return;
+                }else if(lastClickView == a_1 ){
+//                    a_1.setBackgroundResource(R.drawable.unit_a_2);
+//                    a_2.setBackgroundResource(R.drawable.unit_a_1);
+
+                    Unit temp = a_1;
+                    a_1 = a_2;
+                    a_2 = temp;
+
+                    BackgroundChanger(a_1, false);
+                    lastClickView =null;
+                    a_2_touched = false;
+                    a_1_touched = false;
                     return;
                 }
 
-                i = 1 - i;
-                BackgroundChanger(a_2, i);
+
+
+
+
+
+                a_2_touched = !a_2_touched;
+                BackgroundChanger(ChangerUnit, a_2_touched);
 
                 lastClickView = a_2;
 
@@ -99,47 +165,126 @@ public class GameStart_02 extends BaseActivity {
         });
 
         a_3.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+            Unit ChangerUnit = a_3;
+
             @Override
             public void onClick(View v) {
-                if(lastClickView == a_3){
-                    a_3.setBackgroundResource(R.drawable.unit_a_2);
-                    a_2.setBackgroundResource(R.drawable.unit_a_3);
+                if(lastClickView == a_2){ // && a_2.selected
+//                    a_3.setBackgroundResource(R.drawable.unit_a_2);
+//                    a_2.setBackgroundResource(R.drawable.unit_a_3);
 
                     Unit temp = a_3;
                     a_3 = a_2;
                     a_2 = temp;
 
-                    BackgroundChanger(a_2, 0);
-                    lastClickView = a_3;
+                    BackgroundChanger(a_2, false);
+                    lastClickView = null;
+                    a_2_touched = false;
+                    a_3_touched = false;
+                    return;}
+                 else if(lastClickView == a_4 ){
+//                    a_4.setBackgroundResource(R.drawable.unit_a_3);
+//                    a_3.setBackgroundResource(R.drawable.unit_a_4);
+
+                    Unit temp = a_4;
+                    a_4 = a_3;
+                    a_3 = temp;
+
+                    BackgroundChanger(a_4, false);
+                    lastClickView =null;
+                    a_4_touched = false;
+                    a_3_touched = false;
+                    return;
+                }else if(lastClickView == a_1){
+//                    a_1.setBackgroundResource(R.drawable.unit_a_3);
+//                    a_3.setBackgroundResource(R.drawable.unit_a_1);
+
+                    Unit temp = a_1;
+                    a_1 = a_3;
+                    a_3 = temp;
+
+                    BackgroundChanger(a_1, false);
+                    lastClickView =null;
+                    a_1_touched = false;
+                    a_3_touched = false;
                     return;
                 }
 
-                i = 1 - i;
-                BackgroundChanger(a_3, i);
+
+
+
+
+                a_3_touched = !a_3_touched;
+                BackgroundChanger(ChangerUnit, a_3_touched);
 
                 lastClickView = a_3;
 
             }
         });
 
+
         a_4.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+            Unit ChangerUnit = a_4;
             @Override
             public void onClick(View v) {
-                i = 1 - i;
-                BackgroundChanger(a_4, i);
+
+                if(lastClickView == a_2){
+//                    a_4.setBackgroundResource(R.drawable.unit_a_2);
+//                    a_2.setBackgroundResource(R.drawable.unit_a_4);
+
+                    Unit temp = a_4;
+                    a_4 = a_2;
+                    a_2 = temp;
+
+                    BackgroundChanger(a_2, false);
+                    lastClickView = null;
+                    a_2_touched = false;
+                    a_4_touched = false;
+                    return;
+                }else if(lastClickView == a_3){
+//                    a_4.setBackgroundResource(R.drawable.unit_a_3);
+//                    a_3.setBackgroundResource(R.drawable.unit_a_4);
+
+                    Unit temp = a_4;
+                    a_4 = a_3;
+                    a_3 = temp;
+
+                    BackgroundChanger(a_3, false);
+                    lastClickView =null;
+                    a_4_touched = false;
+                    a_3_touched = false;
+                    return;
+                }else if(lastClickView == a_1){
+//                    a_1.setBackgroundResource(R.drawable.unit_a_4);
+//                    a_4.setBackgroundResource(R.drawable.unit_a_1);
+
+                    Unit temp = a_1;
+                    a_1 = a_4;
+                    a_4 = temp;
+
+                    BackgroundChanger(a_1, false);
+                    lastClickView =null;
+                    a_1_touched = false;
+                    a_4_touched = false;
+                    return;
+                }
+
+
+
+
+                a_4_touched = !a_4_touched;
+                BackgroundChanger(ChangerUnit, a_4_touched);
 
                 lastClickView = a_4;
             }
         });
 
         b_1.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+
             @Override
             public void onClick(View v) {
-                i = 1 - i;
-                BackgroundChanger(b_1, i);
+                b_1_touched = !b_1_touched;
+                BackgroundChanger(b_1, b_1_touched);
 
                 lastClickView = b_1;
             }
@@ -147,11 +292,11 @@ public class GameStart_02 extends BaseActivity {
 
 
         b_2.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+
             @Override
             public void onClick(View v) {
-                i = 1 - i;
-                BackgroundChanger(b_2, i);
+                b_2_touched = !b_2_touched;
+                BackgroundChanger(b_2, b_2_touched);
 
                 lastClickView = b_2;
 
@@ -159,27 +304,24 @@ public class GameStart_02 extends BaseActivity {
         });
 
 
-
-        boolean b3 = true;
         b_3.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
 
             @Override
             public void onClick(View v) {
-                i = 1 - i;
-                BackgroundChanger(b_3, i);
+                b_3_touched = !b_3_touched;
+                BackgroundChanger(b_3, b_3_touched);
 
                 lastClickView = b_3;
             }
         });
 
         b_4.setOnClickListener(new View.OnClickListener() {
-            int i = 0;
+
             @Override
             public void onClick(View v) {
-                i = 1 - i;
+                b_4_touched = !b_4_touched;
 
-                BackgroundChanger(b_4, i);
+                BackgroundChanger(b_4, b_4_touched);
 
                 lastClickView = b_4;
             }
@@ -188,12 +330,12 @@ public class GameStart_02 extends BaseActivity {
 
     }
 
-
     public void BackgroundChanger_1(Unit unit){
         // 모든 유닛 터치 원상복구
         for(int j = 0; j < list.size(); j++){
             if(list.get(j) != unit){
                 list.get(j).setClickable(true);
+                list.get(j).selected = false;
             }
         }
 
@@ -215,6 +357,7 @@ public class GameStart_02 extends BaseActivity {
     public void BackgroundChanger_2(Unit unit){
         // 한 유닛 터치 원상복구
         unit.setClickable(true);
+        unit.selected = true;
 
         if(unit == a_1) {a_1.setBackgroundResource(R.drawable.unit_a_1_change);}
         else if(unit == a_2) {a_2.setBackgroundResource(R.drawable.unit_a_2_change);}
@@ -240,7 +383,7 @@ public class GameStart_02 extends BaseActivity {
         }
     }
 
-    public void BackgroundChanger(Unit unit, int i){
+    public void BackgroundChanger(Unit unit, boolean backBool){
 
         a_1.setBackgroundResource(R.drawable.unit_a_1);
         a_2.setBackgroundResource(R.drawable.unit_a_2);
@@ -259,7 +402,7 @@ public class GameStart_02 extends BaseActivity {
 
 
         if((unit == a_1) || (unit == b_1)){
-            if ( i == 0 ){
+            if (!backBool){
                 for(int k = 0; k < list.size(); k++){
                     if((unit.now - list.get(k).now == -11) || (unit.now - list.get(k).now == -9)
                             || (unit.now - list.get(k).now == 11) ||  (unit.now - list.get(k).now == 9))
@@ -285,7 +428,7 @@ public class GameStart_02 extends BaseActivity {
         }
 
         else if((unit == a_2) || (unit == b_2)){
-            if ( i == 0 ){
+            if (!backBool){
                 for(int k = 0; k < list.size(); k++){
                     if((unit.now - list.get(k).now == 1) || (unit.now - list.get(k).now == -1)
                             || (unit.now - list.get(k).now == 10) ||  (unit.now - list.get(k).now == -10)
@@ -309,7 +452,7 @@ public class GameStart_02 extends BaseActivity {
         }
 
         else if((unit == a_3) || (unit == b_3)){
-            if ( i == 0 ){
+            if (!backBool){
                 for(int k = 0; k < list.size(); k++){
                     if((unit.now - list.get(k).now == 1) || (unit.now - list.get(k).now == -1)
                             || (unit.now - list.get(k).now == 10) ||  (unit.now - list.get(k).now == -10))
@@ -328,7 +471,7 @@ public class GameStart_02 extends BaseActivity {
 
 
         else if(unit == a_4){
-            if ( i == 0 ){
+            if (!backBool ){
                 for(int k = 0; k < list.size(); k++){
                     if( (unit.now - list.get(k).now == -10) )
                     { BackgroundChanger_1(list.get(k)); }
@@ -344,7 +487,7 @@ public class GameStart_02 extends BaseActivity {
         }
 
         else if(unit == b_4){
-            if ( i == 0 ){
+            if (!backBool){
                 for(int k = 0; k < list.size(); k++){
                     if( (unit.now - list.get(k).now == 10) )
                     { BackgroundChanger_1(list.get(k)); }

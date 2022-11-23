@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 public class Unit extends androidx.appcompat.widget.AppCompatImageButton {
 
     public int now = 0;
+    public boolean selected = false;
     public Unit(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
