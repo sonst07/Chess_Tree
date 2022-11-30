@@ -58,8 +58,7 @@
                     android:id="@+id/A_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_a_2" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -71,8 +70,7 @@
                     android:id="@+id/A_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_a_3" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,8 +99,7 @@
                     android:id="@+id/A_a"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_0" />
+                    android:layout_margin="8dp" />
 
             </LinearLayout>
 
@@ -115,8 +112,7 @@
                     android:id="@+id/A_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_a_4" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,8 +124,7 @@
                     android:id="@+id/A_b"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_0" />
+                    android:layout_margin="8dp" />
 
             </LinearLayout>
 
@@ -159,8 +154,7 @@
                     android:id="@+id/B_a"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_0" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -172,8 +166,7 @@
                     android:id="@+id/B_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_b_4" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -185,8 +178,7 @@
                     android:id="@+id/B_b"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_0" />
+                    android:layout_margin="8dp" />
 
             </LinearLayout>
 
@@ -216,8 +208,7 @@
                     android:id="@+id/B_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_b_3" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -229,8 +220,7 @@
                     android:id="@+id/B_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_b_2" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -242,8 +232,7 @@
                     android:id="@+id/B_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/unit_b_1" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
             <LinearLayout

@@ -53,6 +53,10 @@
         <activity
             android:name=".GameStart_02"
             android:exported="false" />
+
+        <activity
+            android:name=".GameStart_03"
+            android:exported="false" />
         <activity
             android:name=".Setting_01"
             android:exported="false" />

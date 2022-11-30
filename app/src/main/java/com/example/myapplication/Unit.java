@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,9 +14,19 @@ import androidx.annotation.Nullable;
 
 public class Unit extends androidx.appcompat.widget.AppCompatImageButton {
 
+    //02버전을 위한것
     public int now = 0;
     public boolean selected = false;
+
+    //03버전을 위한것
+    // now는 여기서도 사용됨
+    public String what = null;
+    public boolean touched = false;
+
     public Unit(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
+
+
+
 }

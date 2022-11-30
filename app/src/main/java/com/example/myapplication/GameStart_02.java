@@ -12,10 +12,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class GameStart_02 extends BaseActivity {
+    //switchUnit 포기
 
+    Unit exchange01 = null;
+    Unit exchange02 = null;
     Unit lastClickView;
     Unit a_1, a_2, a_3, a_4, a_a, a_b;
     Unit b_1, b_2, b_3, b_4, b_a, b_b;
+
     boolean a_1_touched, a_2_touched, a_3_touched, a_4_touched;
     boolean b_1_touched, b_2_touched, b_3_touched, b_4_touched;
 
@@ -35,6 +39,8 @@ public class GameStart_02 extends BaseActivity {
         b_1 = findViewById(R.id.B_1); b_2 = findViewById(R.id.B_2); b_3 = findViewById(R.id.B_3);
         b_4 = findViewById(R.id.B_4); b_a = findViewById(R.id.B_a); b_b = findViewById(R.id.B_b);
 
+        a_1.setBackgroundResource(R.drawable.unit_a_1);
+
         list.add(a_1); list.add(a_2); list.add(a_3);
         list.add(a_a); list.add(a_4); list.add(a_b);
         list.add(b_1); list.add(b_2); list.add(b_3);
@@ -49,6 +55,13 @@ public class GameStart_02 extends BaseActivity {
         b_3.now = 31; b_2.now = 32; b_1.now = 33;
 
 
+        init();
+
+
+    }
+
+    public void init(){
+
         a_1.setOnClickListener(new View.OnClickListener() {
             Unit ChangerUnit = a_1;
             @Override
@@ -57,10 +70,17 @@ public class GameStart_02 extends BaseActivity {
                 if(lastClickView == a_2){
 //                    a_1.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_1);
-
-                    Unit temp = a_1;
-                    a_1 = a_2;
-                    a_2 = temp;
+                    exchange01 = a_1;
+                    exchange02 = a_2;
+                    a_1 = null;
+                    a_2 = null;
+                    a_1 = exchange02;
+                    a_2 = exchange01;
+                    a_1.findViewById(R.id.A_2);
+                    a_2.findViewById(R.id.A_1);
+                    exchange01 = null;
+                    exchange02 = null;
+//                    switchUnit(a_1, a_2);
 
                     BackgroundChanger(a_2, false);
                     lastClickView = null;
@@ -71,9 +91,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_4.setBackgroundResource(R.drawable.unit_a_1);
 //                    a_1.setBackgroundResource(R.drawable.unit_a_4);
 
-                    Unit temp = a_4;
-                    a_4 = a_1;
-                    a_1 = temp;
+                    exchange01 = a_1;
+                    exchange02 = a_4;
+                    a_1 = null;
+                    a_4 = null;
+                    a_1 = exchange02;
+                    a_4 = exchange01;
+                    a_1.findViewById(R.id.A_4);
+                    a_4.findViewById(R.id.A_1);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_4, false);
                     lastClickView =null;
@@ -84,9 +111,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_1.setBackgroundResource(R.drawable.unit_a_3);
 //                    a_3.setBackgroundResource(R.drawable.unit_a_1);
 
-                    Unit temp = a_1;
-                    a_1 = a_3;
-                    a_3 = temp;
+                    exchange01 = a_1;
+                    exchange02 = a_3;
+                    a_1 = null;
+                    a_3 = null;
+                    a_1 = exchange02;
+                    a_3 = exchange01;
+                    a_1.findViewById(R.id.A_3);
+                    a_3.findViewById(R.id.A_1);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_3, false);
                     lastClickView =null;
@@ -114,9 +148,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_3.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_3);
 
-                    Unit temp = a_3;
-                    a_3 = a_2;
-                    a_2 = temp;
+                    exchange01 = a_2;
+                    exchange02 = a_3;
+                    a_2 = null;
+                    a_3 = null;
+                    a_2 = exchange02;
+                    a_3 = exchange01;
+                    a_2.findViewById(R.id.A_3);
+                    a_3.findViewById(R.id.A_2);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_3, false);
                     lastClickView =null;
@@ -127,9 +168,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_4.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_4);
 
-                    Unit temp = a_4;
-                    a_4 = a_2;
-                    a_2 = temp;
+                    exchange01 = a_2;
+                    exchange02 = a_4;
+                    a_2 = null;
+                    a_4 = null;
+                    a_2 = exchange02;
+                    a_4 = exchange01;
+                    a_2.findViewById(R.id.A_4);
+                    a_4.findViewById(R.id.A_2);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_4, false);
                     lastClickView =null;
@@ -140,9 +188,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_1.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_1);
 
-                    Unit temp = a_1;
-                    a_1 = a_2;
-                    a_2 = temp;
+                    exchange01 = a_2;
+                    exchange02 = a_1;
+                    a_2 = null;
+                    a_1 = null;
+                    a_2 = exchange02;
+                    a_1 = exchange01;
+                    a_1.findViewById(R.id.A_2);
+                    a_2.findViewById(R.id.A_1);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_1, false);
                     lastClickView =null;
@@ -173,22 +228,36 @@ public class GameStart_02 extends BaseActivity {
 //                    a_3.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_3);
 
-                    Unit temp = a_3;
-                    a_3 = a_2;
-                    a_2 = temp;
+                    exchange01 = a_2;
+                    exchange02 = a_3;
+                    a_2 = null;
+                    a_3 = null;
+                    a_2 = exchange02;
+                    a_3 = exchange01;
+                    a_2.findViewById(R.id.A_3);
+                    a_3.findViewById(R.id.A_2);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_2, false);
                     lastClickView = null;
                     a_2_touched = false;
                     a_3_touched = false;
                     return;}
-                 else if(lastClickView == a_4 ){
+                else if(lastClickView == a_4 ){
 //                    a_4.setBackgroundResource(R.drawable.unit_a_3);
 //                    a_3.setBackgroundResource(R.drawable.unit_a_4);
 
-                    Unit temp = a_4;
-                    a_4 = a_3;
-                    a_3 = temp;
+                    exchange01 = a_4;
+                    exchange02 = a_3;
+                    a_4 = null;
+                    a_3 = null;
+                    a_4 = exchange02;
+                    a_3 = exchange01;
+                    a_4.findViewById(R.id.A_3);
+                    a_3.findViewById(R.id.A_4);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_4, false);
                     lastClickView =null;
@@ -199,9 +268,16 @@ public class GameStart_02 extends BaseActivity {
 //                    a_1.setBackgroundResource(R.drawable.unit_a_3);
 //                    a_3.setBackgroundResource(R.drawable.unit_a_1);
 
-                    Unit temp = a_1;
-                    a_1 = a_3;
-                    a_3 = temp;
+                    exchange01 = a_1;
+                    exchange02 = a_3;
+                    a_1 = null;
+                    a_3 = null;
+                    a_1 = exchange02;
+                    a_3 = exchange01;
+                    a_1.findViewById(R.id.A_3);
+                    a_3.findViewById(R.id.A_1);
+                    exchange01 = null;
+                    exchange02 = null;
 
                     BackgroundChanger(a_1, false);
                     lastClickView =null;
@@ -232,10 +308,6 @@ public class GameStart_02 extends BaseActivity {
 //                    a_4.setBackgroundResource(R.drawable.unit_a_2);
 //                    a_2.setBackgroundResource(R.drawable.unit_a_4);
 
-                    Unit temp = a_4;
-                    a_4 = a_2;
-                    a_2 = temp;
-
                     BackgroundChanger(a_2, false);
                     lastClickView = null;
                     a_2_touched = false;
@@ -245,10 +317,6 @@ public class GameStart_02 extends BaseActivity {
 //                    a_4.setBackgroundResource(R.drawable.unit_a_3);
 //                    a_3.setBackgroundResource(R.drawable.unit_a_4);
 
-                    Unit temp = a_4;
-                    a_4 = a_3;
-                    a_3 = temp;
-
                     BackgroundChanger(a_3, false);
                     lastClickView =null;
                     a_4_touched = false;
@@ -257,10 +325,6 @@ public class GameStart_02 extends BaseActivity {
                 }else if(lastClickView == a_1){
 //                    a_1.setBackgroundResource(R.drawable.unit_a_4);
 //                    a_4.setBackgroundResource(R.drawable.unit_a_1);
-
-                    Unit temp = a_1;
-                    a_1 = a_4;
-                    a_4 = temp;
 
                     BackgroundChanger(a_1, false);
                     lastClickView =null;
@@ -326,9 +390,8 @@ public class GameStart_02 extends BaseActivity {
                 lastClickView = b_4;
             }
         });
-
-
     }
+
 
     public void BackgroundChanger_1(Unit unit){
         // 모든 유닛 터치 원상복구
