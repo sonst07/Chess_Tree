@@ -32,7 +32,6 @@ public class GameStart_03 extends BaseActivity {
         list.add(u21); list.add(u22); list.add(u23);
         list.add(u31); list.add(u32); list.add(u33);
 
-
         u01.setBackgroundResource(R.drawable.unit_a_1);
         u02.setBackgroundResource(R.drawable.unit_a_2);
         u03.setBackgroundResource(R.drawable.unit_a_3);
@@ -151,6 +150,35 @@ public class GameStart_03 extends BaseActivity {
             }
         });
 
+        u11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0 ; i < list.size(); i++){
+                    if(list.get(i).what == lastClick){
+                        list.get(i).touched = false;
+                        BackgroundChanger(list.get(i));
+
+                        String temp = u11.what;
+                        u11.what = list.get(i).what;
+                        list.get(i).what = temp;
+
+                        BackgroundChanger_1(u11);
+                        BackgroundChanger_1(list.get(i));
+
+                        lastClick = null;
+                        list.get(i).touched = false;
+                        u11.touched = false;
+                        return;
+                    }
+                }
+
+
+                u11.touched = !u11.touched;
+                BackgroundChanger(u11);
+                lastClick = u11.what;
+            }
+        });
+
         u12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,6 +205,64 @@ public class GameStart_03 extends BaseActivity {
                 u12.touched = !u12.touched;
                 BackgroundChanger(u12);
                 lastClick = u12.what;
+            }
+        });
+
+        u13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0 ; i < list.size(); i++){
+                    if(list.get(i).what == lastClick){
+                        list.get(i).touched = false;
+                        BackgroundChanger(list.get(i));
+
+                        String temp = u13.what;
+                        u13.what = list.get(i).what;
+                        list.get(i).what = temp;
+
+                        BackgroundChanger_1(u13);
+                        BackgroundChanger_1(list.get(i));
+
+                        lastClick = null;
+                        list.get(i).touched = false;
+                        u13.touched = false;
+                        return;
+                    }
+                }
+
+
+                u13.touched = !u13.touched;
+                BackgroundChanger(u13);
+                lastClick = u13.what;
+            }
+        });
+
+        u21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0 ; i < list.size(); i++){
+                    if(list.get(i).what == lastClick){
+                        list.get(i).touched = false;
+                        BackgroundChanger(list.get(i));
+
+                        String temp = u21.what;
+                        u21.what = list.get(i).what;
+                        list.get(i).what = temp;
+
+                        BackgroundChanger_1(u21);
+                        BackgroundChanger_1(list.get(i));
+
+                        lastClick = null;
+                        list.get(i).touched = false;
+                        u21.touched = false;
+                        return;
+                    }
+                }
+
+
+                u21.touched = !u21.touched;
+                BackgroundChanger(u21);
+                lastClick = u21.what;
             }
         });
 
@@ -208,6 +294,36 @@ public class GameStart_03 extends BaseActivity {
                 lastClick = u22.what;
             }
         });
+
+        u23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0 ; i < list.size(); i++){
+                    if(list.get(i).what == lastClick){
+                        list.get(i).touched = false;
+                        BackgroundChanger(list.get(i));
+
+                        String temp = u23.what;
+                        u23.what = list.get(i).what;
+                        list.get(i).what = temp;
+
+                        BackgroundChanger_1(u23);
+                        BackgroundChanger_1(list.get(i));
+
+                        lastClick = null;
+                        list.get(i).touched = false;
+                        u23.touched = false;
+                        return;
+                    }
+                }
+
+
+                u23.touched = !u23.touched;
+                BackgroundChanger(u23);
+                lastClick = u23.what;
+            }
+        });
+
 
         u31.setOnClickListener(new View.OnClickListener() {
             @Override
