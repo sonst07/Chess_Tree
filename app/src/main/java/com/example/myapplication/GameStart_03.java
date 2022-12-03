@@ -15,6 +15,8 @@ public class GameStart_03 extends BaseActivity {
     Unit u31, u32, u33;
 
     ArrayList<Unit> list = new ArrayList<>();
+    ArrayList<String> aList = new ArrayList<>();
+    ArrayList<String> bList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,9 @@ public class GameStart_03 extends BaseActivity {
         u21.what = "b_0"; u22.what = "b_4"; u23.what = "b_0";
         u31.what = "b_3"; u32.what = "b_2"; u33.what = "b_1";
 
+        aList.add("a_1"); aList.add("a_2"); aList.add("a_3"); aList.add("a_4"); aList.add("a_0"); aList.add("b_0");
+        bList.add("b_1"); bList.add("b_2"); bList.add("b_3"); bList.add("b_4"); bList.add("a_0"); bList.add("b_0");
+
 
         init();
 
@@ -66,203 +71,63 @@ public class GameStart_03 extends BaseActivity {
         u01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u01.what;
-                        u01.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u01);
 
-                        BackgroundChanger_1(u01);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u01.touched = false;
-                        return;
-                    }
-                }
-
-
-                u01.touched = !u01.touched;
-                BackgroundChanger(u01);
-                lastClick = u01.what;
             }
         });
 
         u02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u02.what;
-                        u02.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u02);
 
-                        BackgroundChanger_1(u02);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u02.touched = false;
-                        return;
-                    }
-                }
-
-
-                u02.touched = !u02.touched;
-                BackgroundChanger(u02);
-                lastClick = u02.what;
             }
         });
 
         u03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u03.what;
-                        u03.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u03);
 
-                        BackgroundChanger_1(u03);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u03.touched = false;
-                        return;
-                    }
-                }
-
-
-                u03.touched = !u03.touched;
-                BackgroundChanger(u03);
-                lastClick = u03.what;
             }
         });
 
         u11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u11.what;
-                        u11.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u11);
 
-                        BackgroundChanger_1(u11);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u11.touched = false;
-                        return;
-                    }
-                }
-
-
-                u11.touched = !u11.touched;
-                BackgroundChanger(u11);
-                lastClick = u11.what;
             }
         });
 
         u12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u12.what;
-                        u12.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u12);
 
-                        BackgroundChanger_1(u12);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u12.touched = false;
-                        return;
-                    }
-                }
-
-
-                u12.touched = !u12.touched;
-                BackgroundChanger(u12);
-                lastClick = u12.what;
             }
         });
 
         u13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u13.what;
-                        u13.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u13);
 
-                        BackgroundChanger_1(u13);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u13.touched = false;
-                        return;
-                    }
-                }
-
-
-                u13.touched = !u13.touched;
-                BackgroundChanger(u13);
-                lastClick = u13.what;
             }
         });
 
         u21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u21.what;
-                        u21.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u21);
 
-                        BackgroundChanger_1(u21);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u21.touched = false;
-                        return;
-                    }
-                }
-
-
-                u21.touched = !u21.touched;
-                BackgroundChanger(u21);
-                lastClick = u21.what;
             }
         });
 
@@ -270,57 +135,17 @@ public class GameStart_03 extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
+                move(u22);
 
-                        String temp = u22.what;
-                        u22.what = list.get(i).what;
-                        list.get(i).what = temp;
-
-                        BackgroundChanger_1(u22);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u22.touched = false;
-                        return;
-                    }
-                }
-
-                u22.touched = !u22.touched;
-                BackgroundChanger(u22);
-                lastClick = u22.what;
             }
         });
 
         u23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
 
-                        String temp = u23.what;
-                        u23.what = list.get(i).what;
-                        list.get(i).what = temp;
+                move(u23);
 
-                        BackgroundChanger_1(u23);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u23.touched = false;
-                        return;
-                    }
-                }
-
-
-                u23.touched = !u23.touched;
-                BackgroundChanger(u23);
-                lastClick = u23.what;
             }
         });
 
@@ -329,28 +154,8 @@ public class GameStart_03 extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
+                move(u31);
 
-                        String temp = u31.what;
-                        u31.what = list.get(i).what;
-                        list.get(i).what = temp;
-
-                        BackgroundChanger_1(u31);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u31.touched = false;
-                        return;
-                    }
-                }
-
-                u31.touched = !u31.touched;
-                BackgroundChanger(u31);
-                lastClick = u31.what;
             }
         });
 
@@ -358,28 +163,8 @@ public class GameStart_03 extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
+                move(u32);
 
-                        String temp = u32.what;
-                        u32.what = list.get(i).what;
-                        list.get(i).what = temp;
-
-                        BackgroundChanger_1(u32);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u32.touched = false;
-                        return;
-                    }
-                }
-
-                u32.touched = !u32.touched;
-                BackgroundChanger(u32);
-                lastClick = u32.what;
             }
         });
 
@@ -387,30 +172,37 @@ public class GameStart_03 extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i = 0 ; i < list.size(); i++){
-                    if(list.get(i).what == lastClick){
-                        list.get(i).touched = false;
-                        BackgroundChanger(list.get(i));
+                move(u33);
 
-                        String temp = u33.what;
-                        u33.what = list.get(i).what;
-                        list.get(i).what = temp;
-
-                        BackgroundChanger_1(u33);
-                        BackgroundChanger_1(list.get(i));
-
-                        lastClick = null;
-                        list.get(i).touched = false;
-                        u33.touched = false;
-                        return;
-                    }
-                }
-
-                u33.touched = !u33.touched;
-                BackgroundChanger(u33);
-                lastClick = u33.what;
             }
         });
+    }
+
+    public void move(Unit unit){
+        for(int i = 0 ; i < list.size(); i++){
+            if(list.get(i).what == lastClick){
+                list.get(i).touched = false; // 터치시 원상복귀용
+                BackgroundChanger(list.get(i));
+
+                String temp = unit.what; // 서로 what 교환
+                unit.what = list.get(i).what;
+                list.get(i).what = temp;
+
+                BackgroundChanger_1(unit); // 바뀐 그림 바꿔주기
+                BackgroundChanger_1(list.get(i));
+
+                lastClick = null;
+                return;
+            }
+        }
+
+        unit.touched = !unit.touched;
+        BackgroundChanger(unit);
+        lastClick = unit.what;
+
+
+
+
     }
 
     public void clickBlock(Unit unit){
@@ -424,10 +216,7 @@ public class GameStart_03 extends BaseActivity {
     public void BackgroundChanger_1(Unit unit){
         // 모든 유닛 터치 원상복구
         for(int j = 0; j < list.size(); j++){
-            if(list.get(j) != unit){
-                list.get(j).setClickable(true);
-                list.get(j).selected = false;
-            }
+            list.get(j).setClickable(true);
         }
 
         if(unit.what == "a_1") {unit.setBackgroundResource(R.drawable.unit_a_1);}

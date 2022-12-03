@@ -50,9 +50,6 @@
         <activity
             android:name=".Rule_01"
             android:exported="false" />
-        <activity
-            android:name=".GameStart_02"
-            android:exported="false" />
 
         <activity
             android:name=".GameStart_03"

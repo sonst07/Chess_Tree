@@ -21,6 +21,14 @@
             android:layout_height="0dp"
             android:layout_weight="73">
 
+            <ImageView
+                android:id="@+id/A_turn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/blue"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -246,6 +254,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="83">
+
+            <ImageView
+                android:id="@+id/B_turn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/red"/>
 
         </LinearLayout>
 

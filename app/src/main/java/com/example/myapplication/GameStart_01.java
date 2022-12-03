@@ -23,7 +23,7 @@ public class GameStart_01<button> extends BaseActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GameStart_01.this, GameStart_02.class);
+                Intent intent = new Intent(GameStart_01.this, GameStart_03.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }
